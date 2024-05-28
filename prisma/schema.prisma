@@ -1,0 +1,26 @@
+// schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Deposit {
+  id           Int      @id @default(autoincrement())
+  vaultAddress String
+  receiver     String
+  amount       BigInt
+  timestamp    DateTime @default(now())
+}
+
+model Withdrawal {
+  id           Int      @id @default(autoincrement())
+  vaultAddress String
+  owner        String
+  sharesAmount BigInt
+  timestamp    DateTime @default(now())
+}
