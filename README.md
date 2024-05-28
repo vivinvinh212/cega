@@ -1,4 +1,4 @@
-Here's a README that summarizes the two components (Event Listener and Event Indexer) of the Cega Smart Contract for handling deposit and withdrawal events, followed by a roadmap document outlining potential future developments.
+Below is the updated README including a section on deliverables, which summarizes the components provided and the functionalities of the Cega Smart Contract event handling system.
 
 ---
 
@@ -51,10 +51,19 @@ npx prisma migrate dev
 - `listener/`: Contains the setup for the event listener using ethers.js.
 - `indexer/`: Houses the Keeper class and utilities for indexing events.
 
+## Deliverables
+
+- **Event Listener**: Listens for real-time deposit and withdrawal events and stores them in PostgreSQL.
+- **Event Indexer (Keeper)**: Indexes past and ongoing transaction data, handling large volumes of data with Redis caching.
+- **Documentation**: Includes detailed setup and usage instructions, along with inline code documentation.
+- **API**: Features APIs to retrieve transaction details and history, ensuring data access is efficient and secure.
+- **Roadmap**: Outlines future enhancements and expansions to support additional features and blockchains.
 
 ## Roadmap
+Given the short time amount for the assignment, there are numerous items to improve the application
 
 ### Short-Term Goals
+- Complete the api design for given purposes, improve performance by caching, authorization, etc.
 - Align the schema, code structure and convention of listener and indexer
 - Build services to automate the process and monitor container's health
 - Enhance error handling and retry mechanisms for blockchain interactions.
@@ -72,4 +81,3 @@ npx prisma migrate dev
 - Explore the use of decentralized storage solutions to improve data integrity and security.
 
 ---
-
