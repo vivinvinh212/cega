@@ -13,7 +13,7 @@ model Deposit {
   id           Int      @id @default(autoincrement())
   vaultAddress String
   receiver     String
-  amount       BigInt
+  amount       String
   timestamp    DateTime @default(now())
 }
 
@@ -21,6 +21,6 @@ model Withdrawal {
   id           Int      @id @default(autoincrement())
   vaultAddress String
   owner        String
-  sharesAmount BigInt
+  sharesAmount String
   timestamp    DateTime @default(now())
 }
